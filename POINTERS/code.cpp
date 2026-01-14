@@ -5,6 +5,8 @@ int main() {
     int var = 557;      // A simple integer (using your VTU subject code!)
     int* ptr = &var;    // A pointer storing the address of var
     int** ptrr = &ptr;  // A double pointer storing the address of ptr
+    
+    int* pointer = NULL; // it will not store the address of another variable , stores 0
 
 
 
@@ -41,6 +43,8 @@ int main() {
 
         cout << "double pointer :"<< **ptrr << endl;
         cout << "single pointer :"<< *ptr << endl;
+
+        cout << pointer << "\n";
 
     return 0;
 }
