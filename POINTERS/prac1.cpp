@@ -5,6 +5,6 @@ using namespace std;
     
    float* a,b; //a->> is a pointer float and b->>> is a  normal float 
 
-   int* arr = 0;  // arr is a NULL pointer  and we can initialize a pointer with 0
+   int* arr = 0;  // arr is a NULL pointer 
 
  }
