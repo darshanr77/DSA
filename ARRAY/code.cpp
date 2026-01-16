@@ -14,12 +14,10 @@ int main () {
     cout << ar[0] <<"," << ar[3] <<"," << ar[4] << endl;    // 1, 0 ,0
 
 
-     // cout << arr << endl; elements will not be printed its adress will be printed
-
-
-    //cout << *arr << endl;     now oth index value willl be printed
-    //cout << *(arr+1) << endl; 
-    //cout << *(arr+2) << endl; 
+     // cout << arr << endl; elements will not be printed in output its adress will be printed
+    //cout << *arr << endl;     now zeroth  index value will be printed
+    //cout << *(arr+1) << endl;   arr[2]
+    //cout << *(arr+2) << endl;     arr[3]
    //cout << *(arr+3) << endl; 
 
 
