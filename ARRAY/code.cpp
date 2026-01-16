@@ -13,5 +13,32 @@ int main () {
 
     cout << ar[0] <<"," << ar[3] <<"," << ar[4] << endl;    // 1, 0 ,0
 
+
+     // cout << arr << endl; elements will not be printed its adress will be printed
+
+
+    //cout << *arr << endl;     now oth index value willl be printed
+    //cout << *(arr+1) << endl; 
+    //cout << *(arr+2) << endl; 
+   //cout << *(arr+3) << endl; 
+
+
+   // *arr = arr[0];
+   // *(arr+1) = arr[1];
+
+   // array name = pointer   eg->> arr = *ptr   and array is always passed by reference in any funcction
+
+//    void func(int* ptr){
+//     ptr[0] = 1000;
+//    }
+
+//    int main () {
+//     int arr[] = { 1 , 4, 6, 7, 9};
+
+//     func(arr);
+
+//     cout << arr[0] << "=" << *arr << endl;   // 0th index will be 1000  any chnages in viod function while pass by reference chnages in main or int main function
+//    }
+
     return 0;
 }
