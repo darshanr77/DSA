@@ -35,8 +35,15 @@ int main () {
 
 //     func(arr);
 
-//     cout << arr[0] << "=" << *arr << endl;   // 0th index will be 1000  any chnages in viod function while pass by reference chnages in main or int main function
+//     cout << arr[0] << "=" << *arr << endl;   // 0th index will be 1000  any chnages in viod function while pass by reference changes in main 
+//          or int main function
 //    }
+
+
+    // if we pass any arr from int main to any function like printA(arr)  then the size of arr in printA(int num) will be the size of int pointer = 8
+    // arr[5] = {1,2,3,3,4} size of this array is 20 because each element has a capacity of 4 byte so 20
+    // if we want original size of array then  n = sizeof(arr) / sizeof(int);
+    
 
     return 0;
 }
