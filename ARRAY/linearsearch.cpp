@@ -1,14 +1,16 @@
 #include<iostream>
 using namespace std;
 
-void LinSearch(int arr[], int n, int key){
+int LinSearch(int* arr, int n, int key){        //void will not returns nothing int returns index count 0 -1  result
     for (int indx = 0; indx < n; indx++){
         if (arr[indx] == key){
+
             cout << "Element found at index " << indx << endl;
-            return;
+            //OR
+            return indx;
         }
     }
-    cout << "Element not found" << endl;
+    cout << "Element not found" << endl;  // return -1 ; if not found
 }
 
 int main () {
