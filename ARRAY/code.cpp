@@ -1,6 +1,9 @@
 #include<iostream>
 using namespace std;
 
+// time complexcity is the relatin b/w no of inputs and no of operations
+//array acts as an constant pointer and arr can be passes in functions like int* arr OR int arr[]  and the arr cannot be changed (modified) in function
+
 int main () {
 
     int array[10];          // we can declare an array by size 

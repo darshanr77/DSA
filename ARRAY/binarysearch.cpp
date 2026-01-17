@@ -10,8 +10,8 @@ int BinSearch(int arr[] , int n , int key) {
     int st = 0;
     int end = n-1;
 
-    while(st <= end){
-        int mid = (st+end)/2;
+    while(st <= end){          // bcoz st will compare every element and reaches end thats why =   and after running every time it calculates mid  and checks conditions and problem will be divided
+        int mid = (st+end)/2;  // after 1st time while loop it claculates mid and separates the left and right the checks the condition again 
 
         if(arr[mid] == key){
             return mid;
@@ -20,7 +20,7 @@ int BinSearch(int arr[] , int n , int key) {
             st = mid + 1;
         }
         else {
-            end = mid - 1;
+            end = mid - 1;      // for this st <= end is used
         }
     }
 
