@@ -4,7 +4,16 @@ using namespace std;
 
 // with extra space and without using extra space
 
-// for extra psace we have to create a copy arr so that we can print theoriginal array backwards and overwrite on original array
+// for extra space we have to create a copy arr so that we can print theoriginal array backwards and overwrite on original array
+
+
+void printArr(int* arr, int n){ // 0(n)  but best is  0(1) without using space
+    for(int i=0;i<n;i++){
+        cout << arr[i] <<"," ;
+
+    }
+    cout<<endl;
+}
 
 
 int main () {
@@ -23,5 +32,6 @@ int main () {
         arr[i] = copyArr[i];        // here we will paste the coprArr in arr
     }
     
+    printArr(arr,n);
     return 0;
 }
