@@ -20,11 +20,12 @@ int main () {
     int end=n-1;
 
      while(st < end){  // st value < end value 
-        // swap(st,end); 
-
-        int temp = arr[st];
-        arr[st]=arr[end];
-        arr[end]=temp;
+       
+        swap (arr[st] , arr[end]);
+            //   OR
+        // int temp = arr[st];  
+        // arr[st]=arr[end];
+        // arr[end]=temp;
 
 
         st++;  // 0 , 1 , 2
