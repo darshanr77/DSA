@@ -17,9 +17,7 @@ int main () {
 
     int arr[8] = {2, 4, 6, 8, 10, 12, 14, 16};
     int n = sizeof(arr)/sizeof(int);
-    int key = 10;
-
+    int key = 4;
     LinSearch(arr, n, key);
-
     return 0;
 }
