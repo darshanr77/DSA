@@ -8,6 +8,10 @@ using namespace std;
 //  if we do char ptr++ then the element will move 1 index from current in arr or any other due to size of char
 
 
+// ptr ++ means in int skip 4 spaces and if ptr + 3 then skip 12 spaces beacuse for int byte is 4 and 4*3 is 12  
+// ptr -- means in int skip 4 spaces and if ptr - 3 then skip 12 spaces beacuse for int byte is 4 and 4*3 is 12  
+
+// arr[5] -->> arr+1 means 1st index , arr+2 means 2nd index
 
 
 int main () {
