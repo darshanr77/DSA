@@ -13,7 +13,7 @@ int LinSearch(int* arr, int n, int key){        //void will not returns nothing 
             return indx;
         }
     }
-    cout << "Element not found" << endl;  // return -1 ; if not found
+     return -1 ; //if not found
 }
 
 int main () {
