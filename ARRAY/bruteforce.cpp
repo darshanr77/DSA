@@ -1,5 +1,5 @@
 #include<iostream>
-using namespace std;
+using namespace std;  // tim complexcity 0(n^3)
 
 void sumsubarr(int* arr, int n){
     int maxSum = INT16_MIN;
@@ -24,3 +24,12 @@ int main (){
     sumsubarr(arr,n);
     return 0;
 }
+
+
+
+//   
+// 
+// 
+// 
+// 
+// 
