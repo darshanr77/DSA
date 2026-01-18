@@ -3,7 +3,7 @@ using namespace std;
 
 int main() {
 
-    int arr[] = {1, 2, 3};
+    int arr[] = {1, 2, 3};    // 1,3 is not an sub array
     int n = sizeof(arr) / sizeof(int);
 
     // starting index
