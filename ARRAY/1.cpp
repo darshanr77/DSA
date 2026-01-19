@@ -17,7 +17,7 @@ int search(int *nums, int n, int target) {
         if (nums[st] <= nums[mid]) {
 
             if (nums[st] <= target && target < nums[mid])
-                end = mid - 1;
+                end = mid - 1;                              // if target exists in left half
             else
                 st = mid + 1;
         }
@@ -25,7 +25,7 @@ int search(int *nums, int n, int target) {
         else {
 
             if (nums[mid] < target && target <= nums[end])
-                st = mid + 1;
+                st = mid + 1;                               // if target exists in right half
             else
                 end = mid - 1;
         }
