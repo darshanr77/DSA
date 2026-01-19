@@ -22,7 +22,7 @@ void kadanemaxsum(int arr[], int n){
 
 int main () {
 
-    int arr[] = {1 , 3, 5, 6, 7, 9, 11};
+    int arr[] = {1 , -3, 5, 6, -7, 9, 11};
     int n = sizeof(arr)/sizeof(int);
 
     kadanemaxsum(arr, n);
