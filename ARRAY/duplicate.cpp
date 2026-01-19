@@ -7,7 +7,7 @@ bool Duplicate(int nums[], int n) {
     unordered_set<int> s;                       // in this we will store only unique elements from nums[]
 
     for(int i=0 ; i<n ; i++){                   // for printing
-        if(s.count(nums[i]) > 0){               // checking whether same numbers have occured 0,1,2 times if 0 then insert into s
+        if(s.count(nums[i]) > 0){               // before adding to the s set we will check that we have added it before or not if not then we will add the element
             return true;
         }
         s.insert(nums[i]);
