@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+//Binary search
+
 int search(int *nums, int n, int target) {
 
     int st = 0, end = n - 1;
