@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+//0(n+range) OR 0(n)
 //sort the min element to st index of arr then leave it and find 2nd min element and place it in 1th index after first step consider minidx as i in next all the steps ...
 
 void  printArray(int* arr , int n ){    // printing arr
