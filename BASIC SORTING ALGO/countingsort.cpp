@@ -60,3 +60,12 @@ int main () {
     countsort(arr, n);
     return 0;
 }
+
+
+// for(...) {           // n
+//     for(...) {       // n
+//         for(...) {   // n
+//             ...
+//         }
+//     }
+// }  for nesting loop the time complexcity will be 0(n3)  but in counting sort 0(n+k);
