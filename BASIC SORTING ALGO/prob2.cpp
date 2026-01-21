@@ -33,10 +33,10 @@ void insertionSort(int*arr,int n){
         int prev = i-1;
 
         while(prev >= 0 && arr[prev] < curr){
-            arr[prev+1] = arr[prev];
-            prev--;                             // 
+            arr[prev+1] = arr[prev];            // eg 3,2    prev+1 = 2
+            prev--;                             
         }
-        arr[prev+1] = curr;
+        arr[prev+1] = curr;                     // curr = 3
     }
     printA(arr,n);
 }
