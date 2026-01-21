@@ -6,47 +6,38 @@ using namespace std;
 
 void spiralMat(int mat[][4], int n, int m){
 
-    int top = 0;        // starting row index
-    int bottom = n - 1; // ending row index
-    int left = 0;       // starting column index
-    int right = m - 1;  // ending column index
+    int top = 0;        
+    int bottom = n - 1; 
+    int left = 0;       
+    int right = m - 1;  
 
-    // loop until all elements are printed
     while(top <= bottom && left <= right){
 
-        //  Print top row (left to right)
+        // Print top row (left to right)
         for(int col = left; col <= right; col++){
             cout << mat[top][col] << " ";
         }
-        top++;   // move top boundary down
+        top++;
 
-
-        //  Print right column (top to bottom)
+        // Print right column (top to bottom)
         for(int row = top; row <= bottom; row++){
             cout << mat[row][right] << " ";
         }
-        right--; // move right boundary left
-
+        right--;
 
         // Print bottom row (right to left)
-        if(top <= bottom){                             // prints until 0 <= m-1
-            for(int col = right; col >= left; col--){
-                cout << mat[bottom][col] << " ";
-            }
-            bottom--; // move bottom boundary up
+        for(int col = right; col >= left; col--){
+            cout << mat[bottom][col] << " ";
         }
-
+        bottom--;
 
         // Print left column (bottom to top)
-        if(left <= right){                            // prints until 0 <= n-1
-            for(int row = bottom; row >= top; row--){
-                cout << mat[row][left] << " ";
-            }
-            left++; // move left boundary right
+        for(int row = bottom; row >= top; row--){
+            cout << mat[row][left] << " ";
         }
-        
+        left++;
     }
-    cout<<endl;
+    cout << endl;
 }
 
 int main(){
