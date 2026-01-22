@@ -12,7 +12,7 @@ void diagnolSum(int mat[][4],int n , int m){
             if(i==j){
                 sum += mat[i][j];
             }
-            else if(j == n-i-1){  // (0,3) (1,2)  =>> j = n-i-1  3 = 4-0-1 = 3 , 2 = 4-1-1 =2 
+            else if(j == n-i-1){  // (0,3) (1,2) (2,1) (3,0)  =>> j = n-i-1  3 = 4-0-1 = 3 , 2 = 4-1-1 =2 
                 sum += mat[i][j];
             }
         }
