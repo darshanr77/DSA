@@ -1,0 +1,18 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+
+
+int main () {
+
+    string str = "apna college";
+
+    for(int i=0; i<str.length(); i++){  // dot operator is used from oops
+        cout << str[i] << " "; 
+    }   
+    cout << endl;
+
+
+    return 0;
+}
