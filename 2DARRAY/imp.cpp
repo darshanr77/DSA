@@ -3,6 +3,8 @@ using namespace std;
 
 // 2d arr name as as a row pointer like mat
 
+// STL -> standard template library
+
 
 
 
