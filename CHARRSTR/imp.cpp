@@ -1,6 +1,8 @@
 #include<iostream>
 using namespace std;
 
+// literals means the value is fixed like 'apna college'
+
 int main () {
 
 
@@ -22,6 +24,11 @@ int main () {
     int pos = charr - 'a';      // same for capital
 
     cout << pos << endl;        // same for capital ie 3
+
+
+    char work[5] = "code";          // 5 beacuse null character in this no need to write '\o'
+    cout << work << sizeof(work)<< endl;
+
 
     return 0;
 }
