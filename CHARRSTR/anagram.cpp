@@ -2,6 +2,7 @@
 #include<string>
 using namespace std;
 
+// if the both strings having same length and can form a word then its is a anagram and its TC is 0(n) bcoz no nested loop
 
 bool anagram(string str1,string str2){
 
