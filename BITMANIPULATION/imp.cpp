@@ -9,9 +9,15 @@ using namespace std;
 
 int main(){
 
-    cout << (~6)<< endl;
-    cout << (~0)<< endl;
+    cout << (~6)<< endl;    // -7
+    cout << (~0)<< endl;    // -1
 
+    // a << b   =   a * 2^b
+    cout << (7 << 2) << endl;   // 28  write 7 in 8byte and left shit zeros to right side then 00001110 to 00011100
+
+
+    // a >> b  =  a / 2^b
+    cout << (7 >> 2) << endl;   // 1   0000111 to 0000001
 
     return 0;
 }
