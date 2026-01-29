@@ -19,5 +19,14 @@ int main(){
     // a >> b  =  a / 2^b
     cout << (7 >> 2) << endl;   // 1   0000111 to 0000001
 
+    cout << ~4 << endl;
+    cout << (8 >> 1) << endl;
+
+    //odd or even
+
+    // num & 1 != 0 odd otherwise even
+    cout << ( 5 & 1 ) << endl;  // 1
+    cout << ( 8 & 1 ) << endl;  // 0
+
     return 0;
 }
