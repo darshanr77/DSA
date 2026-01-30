@@ -4,7 +4,8 @@ using namespace std;
 int ith(int num,int i){
     int bitMask = 1 << i ;
 
-    if(!(num & bitMask)){ // (num & bitMask) ? 0 : 1    if false then ith element is zero
+    // not 1 
+    if(!(num & bitMask)){ // (num & bitMask) ? 0 : 1    if false then ith element is zero  num & bitMask = 1 then true
         return 0;
     }
     else{
