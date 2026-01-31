@@ -21,7 +21,7 @@ int countIBits(int num){
         return count;
 
 }
-
+ 
 int main () {
 
     countIBits(327);
