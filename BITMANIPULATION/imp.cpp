@@ -7,6 +7,9 @@ using namespace std;
 // step2 -> check MSB most significant byte which is first if its 1 then -ve if 0 then +ve for 6 its 1 then -ve
 // step3 -> add one in right then 0000111 then its -7 bcoz MSB is 1 and leave MSB then 7 numbers 
 
+
+// to check odd or even num & 1 = 1 then odd if 0 then even
+
 int main(){
 
     cout << (~6)<< endl;    // -7
