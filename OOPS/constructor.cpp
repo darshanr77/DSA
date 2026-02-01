@@ -18,8 +18,7 @@ public:
         cout << "object created succesfully  constructor is being invoked or called"<<endl;
         name = nameVal;
         id = idVal;
-        color = colorVal;
-
+        color = colorVal;  // this->name = name in parameter write only name 
     }
 
     //setters
