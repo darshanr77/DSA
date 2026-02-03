@@ -9,6 +9,7 @@ int main () {
 
     cin.getline(word,20,'*'); // here white space is not ignored and counted  and 20 is maxsize 
 
+    
 // * is used to terminate the string  in input in terminal
 
     cout << "you entered this :" << word << endl;
