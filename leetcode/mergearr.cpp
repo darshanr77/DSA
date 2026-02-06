@@ -1,9 +1,8 @@
 #include <iostream>
 using namespace std;
-
+  // using three pointers
 
 void mergeNum(int* num1,int* num2,int n,int m){
-    // using three pointers
 
     int i = m-1;
     int j = n-1;
