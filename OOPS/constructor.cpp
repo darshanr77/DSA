@@ -1,6 +1,9 @@
 #include<iostream>
 using namespace  std;
 
+//constructor is used to allocate a memory to a object
+//and destructor is used to remove the memory of an object
+
 //constructor is special internal function which is invokedd automatically when and obj is created
 //constructor are used for initializaton of data(properties)
  //we create constructors in public for accessing it in main function
