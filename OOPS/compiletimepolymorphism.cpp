@@ -6,6 +6,16 @@ using namespace std;
 // function overloading
 // operator overloading  -->> next file ie operatoroverloading.cpp
 
+// One-line MCQ Tricks ✍️
+
+// virtual keyword → runtime polymorphism
+
+// Same function name, different behavior → polymorphism
+
+// No virtual → base class function called
+
+// With virtual → derived class function called
+
 class Print{
 public:
     void show(int x){
