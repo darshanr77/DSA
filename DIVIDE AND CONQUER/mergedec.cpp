@@ -11,7 +11,7 @@ void merge(int* arr,int si,int ei,int mid){
     int j = mid+1;  // bcoz we have to cmp left and right half values
 
     while( i <= mid && j <= ei){
-        if( arr[i] <= arr[j]){
+        if( arr[i] >= arr[j]){
             temp.push_back(arr[i++]);
         }
         else{
