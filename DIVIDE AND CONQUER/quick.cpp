@@ -32,7 +32,7 @@ void quicksort(int* arr,int si,int ei){
         return;
     }
 
-    int pivot = partition(arr,si,ei);;
+    int pivot = partition(arr,si,ei);
 
     quicksort(arr,si,pivot-1);
     quicksort(arr,pivot+1,ei);
