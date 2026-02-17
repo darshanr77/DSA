@@ -7,6 +7,12 @@ void singleNum(int* num,int n){
     for(int i=0; i<n; i++){
         ans = ans ^ num[i]; // ^ means XOR which clears the ans in which both numbers or ans and num[i] both bits are same then it clears it if not stores it which is single number
     }
+    //dry run
+    // i=0 0=0^4      ans = 4
+    // i=1 4=4^1      ans = 5
+    // i=2 5=5^2      ans = 7
+    // i=3 7=7^4      ans = 3
+    // i=4 3=3^1      ans = 2    so what we get in ans in final that no is missing
 
     cout << ans << endl;
 
