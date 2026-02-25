@@ -1,0 +1,10 @@
+LL
+
+ll is a collection of nodes where each node containes two things
+1-> data
+2-> node* (node pointer which points to next node) // we are taking pointer bcoz we dont have node like int string char
+
+head is the pointer which points to starting node
+
+data → stores value
+next → stores address of next node
