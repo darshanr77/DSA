@@ -2,29 +2,45 @@
 using namespace std;
 
 class Node{
+public:
+
     int data;
-    Node* nextNode;
+    Node* nextPointer;
 
-public:
-    Node(int val){
-        data = val;
-        nextNode = NULL;
+    Node(int val){      // constructor of Node
+        data = val;         // two values data and next pointer
+        nextPointer = NULL;
     }
 };
 
-class List{
-    Node* head;
-    Node* tail;
+void push_front(Node*& head,int val){
+    Node* newNode = new Node(val);
 
-public:
-    List(){
-        head = NULL;
-        tail = NULL;
-    }
+    newNode->nextPointer = head; //newNode’s nextPointer now stores the address that head was pointing to. ie it points to st node and stores the data
+    head = newNode; // head is assigned to newnode ie st node
 };
+
+void printNodes(Node* head){
+    while(head != NULL){
+        cout << head->data << ",";
+        head = head->nextPointer;
+    }
+    cout << "NULL\n";
+}
+
+
 
 int main() {
 
-    List ll();
+    Node* head = NULL;
+
+    push_front(head,1);
+    push_front(head,2);
+    push_front(head,3);
+     push_front(head,3);
+      push_front(head,3);
+       push_front(head,3);
+
+    printNodes(head);
     return 0;
 }
