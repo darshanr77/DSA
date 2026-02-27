@@ -38,6 +38,21 @@ void pop_back(Node*& head){
     temp->nextPointer = NULL;  // assign nextpointer to last node
 }
 
+void push_back(Node*& head,int val){
+    Node* newNode = new Node(val);
+
+    if(head == NULL){
+        head = newNode;
+        return;
+    }
+
+    Node* temp = head;
+    while(temp->nextPointer != NULL){
+        temp = temp->nextPointer;
+    }
+    temp->nextPointer = newNode;
+}
+
 void printList(Node* head){
     while(head != NULL){
         cout << head->data << " ";
@@ -52,6 +67,9 @@ int main() {
 
     Node* head = NULL;
 
+    push_back(head,9);
+    push_back(head,7);
+    push_back(head,8);
     push_front(head,3);
     push_front(head,2);
     push_front(head,1);

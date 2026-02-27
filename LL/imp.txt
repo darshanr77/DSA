@@ -8,3 +8,6 @@ head is the pointer which points to starting node
 
 data → stores value
 next → stores address of next node
+
+node* -> only copy of it will be passed in func
+node*& -> used to push pop front mid and end
