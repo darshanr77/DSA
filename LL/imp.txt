@@ -11,3 +11,5 @@ next → stores address of next node
 
 node* -> only copy of it will be passed in func
 node*& -> used to push pop front mid and end
+
+ head = head->nextPointer;   to jump head to nextnode

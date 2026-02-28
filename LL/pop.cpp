@@ -26,10 +26,11 @@ void pop_back(Node*& head){
     }
     if(head->nextPointer == NULL){ // if only one node is present in ll
         delete head;
+        head = NULL;
         return;
     }
 
-    Node* temp = head;      // temmp points to st node of ll
+    Node* temp = head;      // temp points to st node of ll
 
     while(temp->nextPointer->nextPointer != NULL){ // until st nodes next's next node is not empty
         temp = temp->nextPointer;            // moving temp to nxt node
@@ -53,12 +54,46 @@ void push_back(Node*& head,int val){
     temp->nextPointer = newNode;
 }
 
+void pop_front(Node*& head){
+    if( head == NULL){
+        return;
+    }
+
+    Node* temp = head;
+    head = head->nextPointer;
+    delete temp;
+}
+
 void printList(Node* head){
     while(head != NULL){
         cout << head->data << " ";
         head = head->nextPointer;
     }
     cout << "NULL\n";
+}
+
+void pop_mid(Node* head,int pos){
+    Node* temp = head;
+
+    for(int i=1; i<pos; i++){
+        temp = temp->nextPointer;
+    }
+    Node* delNode = temp->nextPointer;
+    temp->nextPointer = delNode->nextPointer;
+    delete delNode;
+}
+
+void push_mid(Node*& head,int pos,int val){
+    Node* newNode = new Node(val);
+    Node* temp = head;
+
+    for(int i=1; i<pos; i++){
+        temp = temp->nextPointer;
+    }
+
+    newNode->nextPointer = temp->nextPointer;
+    temp->nextPointer = newNode;
+
 }
 
 
@@ -74,7 +109,12 @@ int main() {
     push_front(head,2);
     push_front(head,1);
 
+    push_mid(head,3,111);
+
     pop_back(head);
+    pop_front(head);
+
+    pop_mid(head,3);
 
     printList(head);
 
