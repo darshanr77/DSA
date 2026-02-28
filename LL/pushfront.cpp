@@ -10,6 +10,12 @@ public:
         data = val;
         next = NULL;
     }
+
+    ~Node(){
+        cout << "Deleting node " << data << endl;
+        delete next;
+        next = NULL;
+    }
 };
 
 class List{
@@ -23,14 +29,25 @@ public:
         tail = NULL;
     }
 
+    ~List(){
+        cout << "list"<< endl;
+        if(head != NULL){
+            delete head;
+            head = NULL;
+        }
+    }
+
     //printing list
     void printList(){
-        while(head != NULL){
-            cout << head->data << " ";
-            head = head->next;
-        }
-        cout << "NULL\n";
+    Node* temp = head;
+
+    while(temp != NULL){
+        cout << temp->data << " ";
+        temp = temp->next;
     }
+
+    cout << "NULL\n";
+}
 
     // push front
     void push_front(int val){
@@ -76,8 +93,8 @@ public:
         temp->next = newNode;
     }
 
-    temp = newNode; It DOES NOT change the linked list structure.
-    temp->next = newNode; You are changing the structure of the linked list.
+    // temp = newNode; It DOES NOT change the linked list structure.
+    // temp->next = newNode; You are changing the structure of the linked list.
 
 };
 
@@ -97,6 +114,8 @@ int main() {
     ll.push_mid(100,1);
 
     ll.printList();
+
+
 
 
     return 0;
