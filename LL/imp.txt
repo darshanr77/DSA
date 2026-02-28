@@ -13,3 +13,7 @@ node* -> only copy of it will be passed in func
 node*& -> used to push pop front mid and end
 
  head = head->nextPointer;   to jump head to nextnode
+
+
+ temp = newNode; It DOES NOT change the linked list structure.
+ temp->next = newNode; You are changing the structure of the linked list.

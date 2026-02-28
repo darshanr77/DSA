@@ -11,11 +11,11 @@ public:
         next = NULL;
     }
 
-    ~Node(){
-        cout << "Deleting node " << data << endl;
-        delete next;
-        next = NULL;
-    }
+    // ~Node(){
+    //     cout << "Deleting node " << data << endl;
+    //     delete next;
+    //     next = NULL;
+    // }
 };
 
 class List{
@@ -29,13 +29,13 @@ public:
         tail = NULL;
     }
 
-    ~List(){
-        cout << "list"<< endl;
-        if(head != NULL){
-            delete head;
-            head = NULL;
-        }
-    }
+    // ~List(){
+    //     cout << "list"<< endl;
+    //     if(head != NULL){
+    //         delete head;
+    //         head = NULL;
+    //     }
+    // }
 
     //printing list
     void printList(){
@@ -54,6 +54,8 @@ public:
         Node* newNode = new Node(val);  // dynamic
         // Node* newNode(val); // static 
 
+        cout << "push front\n";
+
 
         if(head == NULL){
             head = tail = newNode;
@@ -67,6 +69,8 @@ public:
     void push_back(int val){
         Node* newNode = new Node(val);
 
+        cout << "push back\n";
+
         if(head == NULL){
             head = tail = newNode;
         }
@@ -76,9 +80,11 @@ public:
         }
     }
 
-    //pop front
+    //push mid
     void push_mid(int val,int pos){
         Node* newNode = new Node(val);
+
+        cout << "push mid\n";
 
         Node* temp = head;
         for(int i=1; i<pos-1; i++){
@@ -96,7 +102,40 @@ public:
     // temp = newNode; It DOES NOT change the linked list structure.
     // temp->next = newNode; You are changing the structure of the linked list.
 
+    void pop_front(){
+         if(head == NULL){
+            cout << "List is NULL\n";
+            return;
+        }
+        cout << "pop front\n";
+      
+            Node* temp = head;
+            head = head->next;  // moving head to next node to make it as 1st node
+
+            temp->next =  NULL;  // deleting node's next will bepointing to null
+            delete temp;
+    }
+
+    void pop_back(){
+        if(head == NULL){
+            cout << "list is empty\n";
+            return;
+        }
+        cout << "pop_back\n";
+        
+
+        Node* temp = head;
+        while( temp->next->next != NULL ){ // means temp is in left of tail
+            temp = temp->next;
+        }
+
+        temp->next = NULL;      // making the temp->next null so that it can be last node
+        delete tail;            // delete tail so last ele will be deleted
+        tail = temp;            // assign tail to temp so that tail is last ele in node
+    }
 };
+
+
 
 
 
@@ -106,13 +145,24 @@ int main() {
     List ll;
 
     ll.push_front(3);
+    ll.printList();
     ll.push_front(2);
+    ll.printList();
     ll.push_front(1);
+    ll.printList();
 
     ll.push_back(4);
+    ll.printList();
 
     ll.push_mid(100,1);
 
+    ll.printList();
+
+    // ll.pop_front();
+
+    // ll.printList();
+
+    ll.pop_back();
     ll.printList();
 
 
