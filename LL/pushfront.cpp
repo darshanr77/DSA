@@ -133,7 +133,50 @@ public:
         delete tail;            // delete tail so last ele will be deleted
         tail = temp;            // assign tail to temp so that tail is last ele in node
     }
+
+
+    // search key using itearator
+    int searchItr(int key){
+    Node* temp = head;
+    int idx = 0;
+
+    while(temp != NULL){
+        if(temp->data == key){
+            return idx;
+        }
+        temp = temp->next;
+        idx++;
+    }
+    return -1;
+}
+
+    // search key using recursion
+    int helper(Node* h,int key){
+
+        if(h == NULL){
+            return -1;
+        }
+
+        if( h->data == key){
+            return 0;
+        }
+
+       int idx =  helper(h->next,key);
+
+       if(idx == -1){
+        return -1;
+       }
+       return idx+1;
+    }
+
+    int search(int key){
+        return helper(head,key);        // currElement = head same
+    }
+
+
 };
+
+
 
 
 
@@ -156,15 +199,17 @@ int main() {
 
     ll.push_mid(100,1);
 
-    ll.printList();
+
 
     // ll.pop_front();
 
     // ll.printList();
 
-    ll.pop_back();
+    // ll.pop_back();
     ll.printList();
 
+    cout << ll.searchItr(1) << endl;
+    cout << ll.search(100) << endl;
 
 
 
