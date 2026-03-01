@@ -192,6 +192,30 @@ public:
         //we use this for printing from back so we point head to prev ie 1st node
     }
 
+    int getsize(){
+        int sizee = 0;
+        Node* temp = head;
+
+        while(temp != NULL){
+            temp = temp->next;
+            sizee++;
+        }
+
+        return sizee;
+    }
+
+    void delNthLast(int n){
+        int size = getsize();
+        Node* prev = head;
+
+        for(int i=1; i<(size-n); i++){
+            prev = prev->next;  // here the prev becomes the deletion node's prev bcoz < size - n   
+        }
+        Node*  del = prev->next;
+        cout << "going to delete :" << del->data << endl;
+        prev->next = prev->next->next;
+    }
+
 
 };
 
@@ -216,7 +240,7 @@ int main() {
     ll.push_back(4);
     ll.printList();
 
-    ll.push_mid(100,1);
+    ll.push_mid(5,1);
 
 
 
@@ -231,6 +255,9 @@ int main() {
     cout << ll.search(100) << endl;
 
     ll.reverse();
+    ll.printList();
+
+    ll.delNthLast(3);
     ll.printList();
 
 

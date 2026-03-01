@@ -21,3 +21,19 @@ node*& -> used to push pop front mid and end
  imp
 
  to remove any node in ll we have to point the node's prev node next to another curr's next node then it get automatically deleted
+
+
+
+ to calculate nth node from back of ll 
+ keyNode = size - n + 1;  this is from back
+ keyNode = size - n  from front
+
+ // slow fast pointers
+
+    Node* slow = head;
+    Node* fast = head;
+
+    while(fast != NULL && fast->next != NULL){  2nd condition bcoz it can got to NULL's next which is last element's next's next
+        slow = slow->next;        // 1 step
+        fast = fast->next->next;  // 2 steps 
+    }
