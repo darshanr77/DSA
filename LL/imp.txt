@@ -17,3 +17,7 @@ node*& -> used to push pop front mid and end
 
  temp = newNode; It DOES NOT change the linked list structure.
  temp->next = newNode; You are changing the structure of the linked list.
+
+ imp
+
+ to remove any node in ll we have to point the node's prev node next to another curr's next node then it get automatically deleted

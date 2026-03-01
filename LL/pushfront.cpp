@@ -173,6 +173,25 @@ public:
         return helper(head,key);        // currElement = head same
     }
 
+    //reverse
+    // using three pointer prev curr next first prev points to NULL the after it comes to ll
+    void reverse() {
+        Node* prev = NULL;
+        Node* curr = head;
+
+        while(curr != NULL){
+            Node* next = curr->next; 
+            curr->next = prev;
+
+            //update prev or move it to next node
+            prev = curr;
+            curr = next;
+
+        }
+        head = prev; // after updations prev becomes first new node and curr points to NULL then loop ends
+        //we use this for printing from back so we point head to prev ie 1st node
+    }
+
 
 };
 
@@ -210,6 +229,9 @@ int main() {
 
     cout << ll.searchItr(1) << endl;
     cout << ll.search(100) << endl;
+
+    ll.reverse();
+    ll.printList();
 
 
 
