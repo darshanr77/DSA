@@ -216,6 +216,49 @@ public:
         prev->next = prev->next->next;
     }
 
+    bool llPalindrome(){
+        //BC
+        if( head == NULL || head->next == NULL){
+            return true;
+        }
+        Node* slow = head;
+        Node* fast = head;
+
+        //  for finding mid and last element then cmp st ele with mid + 1
+        while( fast != NULL && fast->next != NULL){
+            slow = slow->next;
+            fast = fast->next->next;
+        }
+
+        // for finding odd or even
+        if( fast != NULL){ // odd
+            slow = slow->next; // for skipping mid element
+            //if even slow = slow;
+        }
+
+        // reversing right half bcoz if we do only right its enough
+        Node* prev = NULL;
+        Node* curr = slow;   // start from second half
+
+        while(curr != NULL){
+            Node* next = curr->next;
+            // now reverse
+            curr->next = prev;
+            prev = curr;
+            curr = next;
+        }
+
+        // comparing elements
+        while( slow != NULL){
+            if( slow->data != fast->data){
+                return false;
+            }
+            slow = slow->next;
+            fast = fast->next;
+        }
+        return true;
+    }
+
 
 };
 

@@ -37,3 +37,13 @@ node*& -> used to push pop front mid and end
         slow = slow->next;        // 1 step
         fast = fast->next->next;  // 2 steps 
     }
+
+
+    Why?
+    and Node* slow,fast = head;
+
+If fast != NULL → list is odd
+
+If fast == NULL → list is even
+
+So this single condition handles both.
