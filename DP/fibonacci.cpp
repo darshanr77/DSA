@@ -2,6 +2,9 @@
 #include<vector>
 using namespace std;
 
+
+// using memoization means using extra space sloving DP
+
 int fibonacciDP(int n,vector<int> &f){
     //BC
     if( n == 0 || n == 1){
