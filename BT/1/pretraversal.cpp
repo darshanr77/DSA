@@ -11,7 +11,7 @@ public:
     Node(int val){
         this->data = val; //data = val;
         leftChild = rightChild = NULL;
-    }
+    };
 };
 
 
