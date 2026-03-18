@@ -1,0 +1,1 @@
+binary tree is a hierarchical data structure
