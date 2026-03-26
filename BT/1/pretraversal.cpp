@@ -64,7 +64,7 @@ void inOrderTraversal(Node* root){
 
 void levelOrderTraversal(Node* root){
     //bc
-    if(root == NULL){
+    if(root == NULL){ 
         return;
     }
 
@@ -72,14 +72,14 @@ void levelOrderTraversal(Node* root){
     q.push(root);
     q.push(NULL); //bcoz for levels we will print NULL after each level
 
-    while (!q.empty()){
-        Node* curr = q.front();
-        q.pop();
+    while (!q.empty()){ // used to travel all the elements
+        Node* curr = q.front(); // curr stores the data
+        q.pop(); // now the data is popped but its still in curr but removed from queue
 
-        if(curr == NULL){
+        if(curr == NULL){ // here we are cmp curr ie value stored in curr to NULL not queue
             cout << endl;
             if(q.empty()){
-                break;
+                break; // means exit from this loop
             }
             q.push(NULL);
         }else{
