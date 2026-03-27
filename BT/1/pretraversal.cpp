@@ -144,7 +144,7 @@ void topView(Node*root){
     queue<pair<Node*,int>>q;
     map<int,int> m;
 
-    q.push(make_pair(root,0)); // horizontal sitance is initailly 0
+    q.push(make_pair(root,0)); // horizontal sitance is initailly zero
     while(!q.empty()){
         pair<Node*,int> curr = q.front();
         q.pop();
